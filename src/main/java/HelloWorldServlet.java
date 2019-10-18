@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/hello-world")
+@WebServlet({"/hello","/"})
 public class HelloWorldServlet extends HttpServlet {
     int counter = 0;
 
@@ -28,6 +28,6 @@ public class HelloWorldServlet extends HttpServlet {
         } else if (reset.equals("true")) {
             counter = 1;
         }
-        out.println("You have visited this page " + counter + " times!");
+        out.println("<h2>You have visited this page " + counter + " times!</h2>");
     }
 }
